@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingBottom="16dp" >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_bottom_sheet_title"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@color/black"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/container_input_box"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/container_input_box"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_bottom_confirm"
+        app:layout_constraintTop_toBottomOf="@id/tv_bottom_sheet_title" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_input_box"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="end"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@id/container_input_box"
+        app:layout_constraintEnd_toStartOf="@id/tv_unit"
+        app:layout_constraintStart_toStartOf="@id/container_input_box"
+        app:layout_constraintTop_toTopOf="@id/container_input_box"
+        tools:text="80" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/container_input_box"
+        app:layout_constraintEnd_toEndOf="@id/container_input_box"
+        app:layout_constraintTop_toTopOf="@id/container_input_box"
+        tools:text="@string/label_unit_height" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_bottom_sheet_sub_title"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        app:layout_constraintEnd_toEndOf="@id/tv_unit"
+        app:layout_constraintTop_toBottomOf="@id/container_input_box"
+        app:layout_constraintBottom_toTopOf="@id/btn_bottom_confirm"
+        tools:text="유효 범위 : 0 ~ 1000" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_bottom_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rect_round_4_white"
+        android:backgroundTint="@color/md_theme_tertiary"
+        android:foreground="@drawable/bg_ripple"
+        android:gravity="center"
+        android:text="@string/confirm_btn"
+        android:textColor="@color/md_theme_onTertiary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_bottom_sheet_sub_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

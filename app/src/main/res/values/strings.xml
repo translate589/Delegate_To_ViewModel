@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">study</string>
+    <string name="confirm_btn">확인</string>
+    <string name="unit_available_input_range">유효 범위 : %1$s ~ %2$s %3$s</string>
+
+    <string name="title_study_1_bottom_sheet_study">스터디 1. BottomSheet</string>
+
+    <string name="bottom_sheet_title_input_type_1">키를 입력 해주세요</string>
+    <string name="bottom_sheet_title_input_type_2">무게를 입력 해주세요</string>
+
+    <string name="label_unit_height">cm</string>
+    <string name="label_unit_weight">kg</string>
+
+    <string name="label_input_height">키 입력</string>
+    <string name="label_input_weight">체중 입력</string>
+</resources>
